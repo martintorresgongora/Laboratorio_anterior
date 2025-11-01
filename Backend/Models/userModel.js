@@ -62,10 +62,10 @@ class UserModel {
               json_build_object(
                 'comment_id', c.comment_id,
                 'contenido', c.contenido,
-                'fecha_creacion', c."fecha_creaciÓn",
+                'fecha_creacion', c."fecha_creacion",
                 'user_id', c.user_id,
                 'autor_nombre', cu.nombre
-              ) ORDER BY c."fecha_creaciÓn" ASC
+              ) ORDER BY c."fecha_creacion" ASC
             )
             FROM comentario c
             JOIN usuario cu ON c.user_id = cu.user_id
@@ -175,10 +175,10 @@ class UserModel {
               json_build_object(
                 'comment_id', c.comment_id,
                 'contenido', c.contenido,
-                'fecha_creacion', c."fecha_creaciÓn",
+                'fecha_creacion', c."fecha_creacion",
                 'user_id', c.user_id,
                 'autor_nombre', cu.nombre
-              ) ORDER BY c."fecha_creaciÓn" ASC
+              ) ORDER BY c."fecha_creacion" ASC
             )
             FROM comentario c
             JOIN usuario cu ON c.user_id = cu.user_id
