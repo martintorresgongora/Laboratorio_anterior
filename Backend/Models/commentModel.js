@@ -61,7 +61,7 @@ class CommentModel {
       await client.query("BEGIN");
       const updateQuery = `
         UPDATE comentario
-        SET contenido = $1, "fecha_actualizaciÓn" = NOW()
+        SET contenido = $1, "fecha_actualizacion" = NOW()
         WHERE comment_id = $2 AND user_id = $3
         RETURNING comment_id, post_id, user_id, contenido, "fecha_creacion" as fecha_creacion;
       `;
