@@ -56,10 +56,10 @@ class PostModel {
               json_build_object(
                 'comment_id', c.comment_id,
                 'contenido', c.contenido,
-                'fecha_creacion', c."fecha_creaciÓn",
+                'fecha_creacion', c."fecha_creacion",
                 'user_id', c.user_id,
                 'autor_nombre', cu.nombre
-              ) ORDER BY c."fecha_creaciÓn" ASC
+              ) ORDER BY c."fecha_creacion" ASC
             )
             FROM comentario c
             JOIN usuario cu ON c.user_id = cu.user_id
@@ -90,10 +90,10 @@ class PostModel {
               json_build_object(
                 'comment_id', c.comment_id,
                 'contenido', c.contenido,
-                'fecha_creacion', c."fecha_creaciÓn",
+                'fecha_creacion', c."fecha_creacion",
                 'user_id', c.user_id,
                 'autor_nombre', cu.nombre
-              ) ORDER BY c."fecha_creaciÓn" ASC
+              ) ORDER BY c."fecha_creacion" ASC
             )
             FROM comentario c
             JOIN usuario cu ON c.user_id = cu.user_id
@@ -145,7 +145,7 @@ class PostModel {
       // Obtener comentarios
       const commentsQuery = `
         SELECT
-          c.comment_id, c.contenido, c."fecha_creaciÓn" as fecha_creacion,
+          c.comment_id, c.contenido, c."fecha_creacion" as fecha_creacion,
           c.user_id, cu.nombre as autor_nombre
         FROM comentario c
         JOIN usuario cu ON c.user_id = cu.user_id
