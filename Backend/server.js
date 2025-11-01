@@ -23,7 +23,7 @@ const corsOptions = {
     const allowedOrigins = [
       "http://localhost:3000",
       "http://localhost:5173",
-      "https://post-place-backend-ayf9.onrender.com",
+      "https://laboratorio-anterior.onrender.com",
       "https://profound-cat-c43b97.netlify.app", // sin la barra final
     ];
 
