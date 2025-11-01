@@ -150,7 +150,7 @@ class PostModel {
         FROM comentario c
         JOIN usuario cu ON c.user_id = cu.user_id
         WHERE c.post_id = $1
-        ORDER BY c."fecha_creaciÓn" ASC
+        ORDER BY c."fecha_creacion" ASC
       `;
       const commentsResult = await client.query(commentsQuery, [postId]);
 
