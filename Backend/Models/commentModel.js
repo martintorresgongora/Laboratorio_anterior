@@ -26,7 +26,7 @@ class CommentModel {
       const insertQuery = `
         INSERT INTO comentario (post_id, user_id, contenido)
         VALUES ($1, $2, $3)
-        RETURNING comment_id, post_id, user_id, contenido, "fecha_creaciÓn" as fecha_creacion;
+        RETURNING comment_id, post_id, user_id, contenido, "fecha_creacion" as fecha_creacion;
       `;
       const commentResult = await client.query(insertQuery, [
         postId,
@@ -63,7 +63,7 @@ class CommentModel {
         UPDATE comentario
         SET contenido = $1, "fecha_actualizaciÓn" = NOW()
         WHERE comment_id = $2 AND user_id = $3
-        RETURNING comment_id, post_id, user_id, contenido, "fecha_creaciÓn" as fecha_creacion;
+        RETURNING comment_id, post_id, user_id, contenido, "fecha_creacion" as fecha_creacion;
       `;
       const result = await client.query(updateQuery, [
         contenido,
