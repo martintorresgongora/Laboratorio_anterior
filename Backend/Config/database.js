@@ -17,6 +17,8 @@ require("dotenv").config();
  * La configuración se toma de las variables de entorno para mayor seguridad
  * y flexibilidad (Principio de Abierto/Cerrado).
  */
+console.log("🧩 Base de datos activa:", process.env.DATABASE_URL);
+
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
   ssl: {
